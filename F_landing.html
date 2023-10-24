@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MyTaskify</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        
+        #logo {
+            float: left;
+        }
+        
+        .my {
+            font-family: Kaushan Script;
+        }
+        
+        .task {
+            font-family: Montserrat;
+        }
+        
+        .navbar {
+            overflow: auto;
+            background-color: #999;
+        }
+        
+        .navbar a {
+            float: right;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .navbar a:hover {
+            background-color: #aaa;
+            color: black;
+        }
+        
+        .navbar a:active {
+            background-color: rgba(0, 99, 86, 0.658);
+            color: white;
+        }
+        
+        .navbar a.register {
+            padding: 19px 20px;
+        }
+        /* .d{
+            
+            height: 100vh;
+            padding: 50px 50px;
+            
+          } */
+        
+        .container {
+            background-color: #efeed8c4;
+            display: flex;
+            height: 100vh;
+        }
+        
+        .side {
+            background-color: #efeed8c4;
+            color: #3f3f3f;
+            flex: 70%;
+            padding: 200px;
+            font-size: 50px;
+            float: left;
+            display: inline-block;
+        }
+        
+        .right {
+            /* clear: both; */
+            background-color: #efeed8c4;
+            flex: 30%;
+            padding: 20px;
+            float: right;
+            display: inline-block;
+        }
+        
+        .right img {
+            height: 600px;
+            width: 450px;
+        }
+        
+        #desc {
+            font-size: 25px;
+        }
+        
+        footer {
+            background-color: #ccc;
+            color: black;
+            padding: 40px;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+            clear: both;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="navbar">
+        <a href="F_landing.html" id="logo"><span class="my">My</span><span class="task">Taskify</span></a>
+        <a href="F_signup.html" class="register">Sign Up</a>
+        <a href="F_login.html" class="register">Log In</a>
+    </div>
+    <div class="container">
+        <div class="side">
+            <span class="my">My</span><span class="task">Taskify</span> helps teams move work forward.
+            <br><br>
+            <p id="desc">Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique—accomplish it all with <span class="my">My</span><span class="task">Taskify</span>.</p>
+
+        </div>
+        <div class="right">
+            <img src="trello.png" alt="img">
+        </div>
+    </div>
+</body>
+
+</html>

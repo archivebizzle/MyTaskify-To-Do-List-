@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="F_xsl.xsl"?>
+<user id="01">
+	<chore>
+		<date>
+			<year>2020</year>
+			<month>09</month>
+			<day>12</day>
+		</date>
+		<time>
+			<hour>12</hour>
+			<minute>32</minute>
+		</time>
+		<heading>Car from Garage</heading>
+		<description>Pick up car from the service centre near the highway and renew the insurance as well.</description>
+		<category>Personal</category>
+		<tags>Important</tags>
+	</chore>
+	<chore>
+		<date>
+			<year>2021</year>
+			<month>01</month>
+			<day>13</day>
+		</date>
+		<time>
+			<hour>15</hour>
+			<minute>45</minute>
+		</time>
+		<heading>Project Deadline</heading>
+		<description>Submit the project in time before the deadline with proper documnet fromatting.</description>
+		<category>School</category>
+		<tags>ASAP; Priority</tags>
+	</chore>
+	<chore>
+		<date>
+			<year>2021</year>
+			<month>02</month>
+			<day>01</day>
+		</date>
+		<time>
+			<hour>09</hour>
+			<minute>30</minute>
+		</time>
+		<heading>Start reading books</heading>
+		<description>Buy non-fiction books from store and read them atleast 30 minutes a day, starting today.</description>
+		<category>Other</category>
+		<tags>Leisure; Fun;</tags>
+	</chore>
+	<chore>
+		<date>
+			<year>2020</year>
+			<month>09</month>
+			<day>12</day>
+		</date>
+		<time>
+			<hour>12</hour>
+			<minute>32</minute>
+		</time>
+		<heading>Pick up car</heading>
+		<description>Pick up car from the service centre near the highway and renew the insurance as well.</description>
+		<category>Personal</category>
+		<tags>Important</tags>
+	</chore>
+	<chore>
+		<date>
+			<year>2021</year>
+			<month>01</month>
+			<day>13</day>
+		</date>
+		<time>
+			<hour>15</hour>
+			<minute>45</minute>
+		</time>
+		<heading>Project Deadline</heading>
+		<description>Submit the project in time before the deadline with proper documnet fromatting.</description>
+		<category>School</category>
+		<tags>ASAP; Priority</tags>
+	</chore>
+	<chore>
+		<date>
+			<year>2021</year>
+			<month>02</month>
+			<day>01</day>
+		</date>
+		<time>
+			<hour>09</hour>
+			<minute>30</minute>
+		</time>
+		<heading>Start reading books</heading>
+		<description>Buy non-fiction books from store and read them atleast 30 minutes a day, starting today.</description>
+		<category>Other</category>
+		<tags>Leisure; Fun;</tags>
+	</chore>
+	<chore>
+		<date>
+			<year>2020</year>
+			<month>09</month>
+			<day>12</day>
+		</date>
+		<time>
+			<hour>12</hour>
+			<minute>32</minute>
+		</time>
+		<heading>Pick up car</heading>
+		<description>Pick up car from the service centre near the highway and renew the insurance as well.</description>
+		<category>Personal</category>
+		<tags>Important</tags>
+	</chore>
+	<chore>
+		<date>
+			<year>2021</year>
+			<month>01</month>
+			<day>13</day>
+		</date>
+		<time>
+			<hour>15</hour>
+			<minute>45</minute>
+		</time>
+		<heading>Project Deadline</heading>
+		<description>Submit the project in time before the deadline with proper documnet fromatting.</description>
+		<category>School</category>
+		<tags>ASAP; Priority</tags>
+	</chore>
+	<chore>
+		<date>
+			<year>2021</year>
+			<month>02</month>
+			<day>01</day>
+		</date>
+		<time>
+			<hour>09</hour>
+			<minute>30</minute>
+		</time>
+		<heading>Start reading books</heading>
+		<description>Buy non-fiction books from store and read them atleast 30 minutes a day, starting today.</description>
+		<category>Other</category>
+		<tags>Leisure; Fun;</tags>
+	</chore>
+
+</user>

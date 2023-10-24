@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <style>
+        #logo {
+            float: left;
+        }
+        
+        .my {
+            font-family: Kaushan Script;
+        }
+        
+        .task {
+            font-family: Montserrat;
+        }
+        
+        .navbar {
+            overflow: auto;
+            background-color: #999;
+        }
+        
+        .navbar a {
+            float: right;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .navbar a:hover {
+            background-color: #aaa;
+            color: black;
+        }
+        
+        .navbar a:active {
+            background-color: rgba(0, 99, 86, 0.658);
+            color: white;
+        }
+        
+        .navbar a.register {
+            padding: 19px 20px;
+        }
+        
+         :root {
+            --error-color: #dc3545;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            background-color: #efeed8c4;
+            /* display: flex; */
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            width: 400px;
+        }
+        
+        .form {
+            padding: 10px 20px;
+        }
+        
+        .form h1 {
+            font-size: 1.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-field {
+            margin-bottom: 5px;
+            color: #777;
+        }
+        
+        .form-field label {
+            display: block;
+            color: #777;
+            margin-bottom: 5px;
+        }
+        
+        .form-field input {
+            border: solid 2px #f0f0f0;
+            border-radius: 3px;
+            padding: 10px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+        }
+        
+        .form-field input:focus {
+            outline: none;
+        }
+        
+        .form-field.error input {
+            border-color: var(--error-color);
+        }
+        
+        .form-field.success input {
+            border-color: var(--success-color);
+        }
+        
+        .form-field small {
+            color: var(--error-color);
+        }
+        /* button */
+        
+        .btn {
+            width: 100%;
+            padding: 3%;
+            background: #007bff;
+            border-bottom: 2px solid #007bff;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .btn:hover {
+            background: #0069d9;
+            cursor: pointer;
+        }
+        
+        .btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="F_landing.html" id="logo"><span class="my">My</span><span class="task">Taskify</span></a>
+    </div>
+
+    <div class="container">
+        <form action="#" class="form" id="signup" autocomplete="off">
+            <h1>Log In</h1>
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <small></small>
+            </div><br>
+            <div class="form-field">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+            </div><br>
+            <div>
+                <input type="checkbox" onclick="myFunction()"> Show Password
+            </div><br>
+
+            <p class="form-field"> Don't have an account? <a href="F_signup.html">Sign Up</a> here.</p>
+
+            <br>
+            <div class="form-field">
+                <a href="home.html"><input type="button" class="btn" value="Log In"></a>
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

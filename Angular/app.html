@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../../css/navbar.css"> -->
+    <link rel="stylesheet" href="../react/react-demo/src/index.css">
+    <link rel="stylesheet" href="./nav.css">
+    <title>MyTaskify Angular</title>
+</head>
+
+<body ng-app='app' ng-controller='controller' ng-cloak>
+
+    <div class="container">
+        <div class="header">
+            <h1>MyTaskify Scheduler</h1>
+            <button class='btn' style="background-color: {{option?'#006dcc':'#0165b6'}};" ng-model='option' ng-click="option=!option">{{option?"Close":"Add"}}</button>
+        </div>
+        <form class='add-form' ng-show='option' ng-submit="updateTasks()">
+            <div class="form-control">
+                <label>Task</label>
+                <input type="text" ng-model="taskName" placeholder="Brief Description of Task" />
+            </div>
+            <div class="form-control">
+                <label>Day and Time</label>
+                <input type="datetime-local" ng-model="dateTime" />
+            </div>
+            <div class="form-control form-control-check">
+                <label>Set Reminder</label>
+                <input type="checkbox" ng-model='setReminder' />
+            </div>
+            <input type="submit" value="Add Task" class='btn btn-block' />
+        </form>
+        <div ng-repeat='task in tasks' id="{{task.id}}" class="task  {{task.reminder?'reminder':''}}" ng-dblclick='toggleReminder($event)'>
+            <h3>{{task.taskName}} <svg ng-click='deleteTask($event)' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 352 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red; cursor: pointer;">
+                    <path
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                    </path>
+                </svg>
+            </h3>
+            <p>{{task.dateTime | date: 'medium' }}</p>
+        </div>
+    </div>
+    <script src="./angular.js"></script>
+</body>
+
+</html>

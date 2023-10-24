@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-image: linear-gradient(to bottom right, #93a5cf, #e4efe9);
+        }
+        
+        #mtlogo {
+            float: left;
+        }
+        
+        .my {
+            font-family: Kaushan Script;
+        }
+        
+        .task {
+            font-family: Montserrat;
+        }
+        
+        .navbar {
+            /* overflow: auto; */
+            background-color: #999;
+            display: flex;
+        }
+        
+        .navbar a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .navbar a:hover {
+            background-color: #aaa;
+            color: black;
+        }
+        
+        .navbar a:active {
+            background-color: rgba(0, 99, 86, 0.658);
+            color: white;
+        }
+        
+        .navbar a.right {
+            padding: 19px 20px;
+        }
+        
+        .navbar a.rightend {
+            float: right;
+            padding: 19px 20px;
+            margin-left: 1100px;
+        }
+        
+        table {
+            width: 100%;
+            text-align: center;
+            border: 1px solid black;
+            /* display: flex; */
+        }
+        
+        th,
+        td {
+            border: 1px solid black;
+        }
+        
+        .d {
+            background-color: #efeed8c4;
+            color: #3f3f3f;
+            height: 100vh;
+            padding: 5px;
+            font-size: 105%;
+            /* display: flex;
+          flex-wrap: wrap; */
+        }
+        
+        img {
+            opacity: 0.5;
+            filter: alpha(opacity=40);
+            box-shadow: 10px 10px 5px grey;
+        }
+        
+        img:hover {
+            opacity: 1.0;
+            filter: alpha(opacity=100);
+        }
+        
+        .visuals {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden
+        }
+        
+        .visuals video {
+            flex-shrink: 0;
+            min-width: 100%;
+            min-height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        footer {
+            background-color: #e6fffd80;
+            color: black;
+            padding: 40px;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        
+        #transition {
+            width: 150px;
+            height: 100px;
+            background: #060149;
+            color: white;
+            transition: width 2s;
+            transition-timing-function: ease-in-out;
+        }
+        
+        #transition:hover {
+            width: 200pt;
+            background: tomato;
+        }
+        
+        #logo {
+            opacity: 1.0;
+            transition: width 2s, height 2s, transform 1s;
+        }
+        
+        #logo:hover {
+            width: 200px;
+            height: 100px;
+            transform: rotate(360deg);
+        }
+        
+        p.pseudo::first-letter {
+            color: rgb(0, 26, 255);
+            font-size: xx-large;
+        }
+        
+        form {
+            border: 2px solid #555;
+            background: #e0e0e0e3;
+            padding: 20px 40px;
+            width: 400px;
+            border-radius: 20px;
+            margin: 50px auto 0;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input,
+        select,
+        textarea {
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+        
+        input[type="reset"] {
+            font-size: 110%;
+            background: #006dcc;
+            border-color: #016BC1;
+            box-shadow: 0 3px 0 #0165b6;
+            color: #fff;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: 100;
+        }
+        
+        input[type="submit"] {
+            font-size: 110%;
+            background: #006dcc;
+            border-color: #016BC1;
+            box-shadow: 0 3px 0 #0165b6;
+            color: #fff;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: 100;
+        }
+        
+        input[type="reset"]:hover {
+            background: #0165b6;
+        }
+        
+        input[type="submit"]:hover {
+            background: #0165b6;
+        }
+        
+        .new {
+            width: 100px;
+            height: 45px;
+            border: 1px solid black;
+            margin-left: 675px;
+            padding: 30px;
+            text-align: center;
+            background-color: lightgray;
+        }
+        
+        @media screen and (max-width: 700px) {
+            .visuals,
+            .navbar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+
+<body onload="checkCookies()">
+    <div class="navbar">
+        <!-- <a href="home.html">Home</a> -->
+        <a href="F_landing.html" id="mtlogo"><span class="my">My</span><span class="task">Taskify</span></a>
+        <a href="form.html" class="right" id="navFeed">Feedback</a>
+        <a href="F_login.html" class="rightend">Sign out</a>
+    </div>
+    <br>
+    <br>
+
+    <!-- intro  -->
+    <div class="d">
+        <h2>Why is Task Management Essential?</h2>
+        <p class="pseudo">Task management includes planning, analyzing, evaluating and reporting about a particular task’s progress. It an important aspect of the management a project because it helps to follow every task thoroughly. Regardless of the size and complexity
+            of the task, task management is an absolute necessity when it comes to completing a project at time and budget.</p>
+        <p class="pseudo">In order for the process of task management to be effective and efficient, it is imperative that the project manager adheres to a schedule that will cover all important aspects of each task such as status, time, deadline, costs, and assigned resources.</p>
+        <p class="pseudo">Project management, process management, and task management are operations that are strongly interconnected between each other and can influence the project’s dynamics. Moreover, these processes often require a specific project management software
+            so that project managers could regularly check the project’s activities and make proper reports.</p>
+        <p class="pseudo">Task management is useful and beneficial for different reasons such as prioritizing tasks, internal communication, project workflow, project participants’ performance, and more.</p>
+        <h2>Some important points in task management:</h2>
+        <ol>
+            <li>Prioritize tasks</li>
+            <li>Better ‘project manager – team member’ communication</li>
+            <li>Uninterrupted project flow</li>
+            <li>High level of performance</li>
+            <li>Fruitful team collaboration</li>
+            <li>Resource allocation and time management</li>
+        </ol>
+        <h2>Final thoughts</h2>
+        <p>Task management is a practical solution for both project managers and team members. It is proven that the working environment in which is implemented a project management software with task management feature is predetermined to reach success.</p>
+        <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">In fact, team members who are managing their tasks get real-time project status, continually evaluate their performance and build knowledge for future projects. Furthermore, project managers get the possibility to know the status and the % of
+            completeness of each team member project’s tasks and give feedback and comments for the accomplished work. </p>
+    </div>
+    <br>
+    <br>
+
+    <p class="visuals">
+        <a href="Angular/app.html"><input type="button" class="btn" value="Lets Go to the task manager"></a>
+    </p>
+    <!-- feedback -->
+    <div class="d" id="feedback">
+        <h2 class="visuals">Please give you feedback here!</h2>
+
+        <form action="#" onreset="myFunction()">
+            <label for="userme">Enter name:</label><input type="text" id="fname" onblur="myFunction1()">
+            <p>Select gender: <sup class="req">*</sup></p>
+            <input type="radio" name="gender" id="male" value="Sir" onclick="mouseClick(this.value);">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="Ma'am" onclick="mouseClick(this.value);">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" value="Other" onclick="mouseClick(this.value);">
+            <label for="other">Other</label><br>
+            <input type="text" name="feedb" placeholder="Type your feedback">
+
+            <p class="visuals"><input type="reset"></p>
+            <p class="visuals"><input type="submit"></p>
+
+        </form>
+        <br><br>
+
+    </div>
+    <br><br>
+
+    <footer id="inf">
+        Made by : Team Avengers<br> © Copyright 2022. All rights reserved.
+    </footer>
+    <script>
+        var x = 0;
+
+        function myFunction1() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+        function myFunction() {
+            alert("The form was reset");
+        }
+
+        function myEnterFunction() {
+            document.getElementById("demo2").innerHTML = x += 1;
+        }
+
+        function mouseDown() {
+            document.getElementById("myP").style.color = "blue";
+        }
+
+        function mouseUp() {
+            document.getElementById("myP").style.color = "grey";
+        }
+
+        let option = document.getElementById("hi");
+        console.log(option);
+
+        function mouseClick(category) {
+            // let category = id.value;
+            console.log(category);
+            option.innerHTML = 'Hello  ' + category;
+        }
+        document.getElementById('navfeed').addEventListener('dblclick', setFocus);
+
+        function setFocus() {
+            document.getElementById('fname').focus();
+        }
+
+        function checkCookies() {
+            alert("Accept cookies")
+        }
+    </script>
+
+</body>
+
+</html>

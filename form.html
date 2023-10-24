@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(176, 255, 174);
+            /* font-size: 15px; */
+            /* text-align: center; */
+            /* border: 2px solid black; */
+            /* margin: 25%; */
+        }
+        
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        
+        form {
+            border: 2px solid #555;
+            background: #e0e0e0e3;
+            padding: 20px 40px;
+            width: 400px;
+            border-radius: 20px;
+            margin: 50px auto 0;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input,
+        select,
+        textarea {
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+        
+        .row {
+            padding-bottom: 20px;
+            /* border: 2px solid black; */
+        }
+        
+        input[type="submit"] {
+            font-size: 110%;
+            background: #006dcc;
+            border-color: #016BC1;
+            box-shadow: 0 3px 0 #0165b6;
+            color: #fff;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: 100;
+        }
+        
+        input[type="reset"] {
+            font-size: 110%;
+            background: #006dcc;
+            border-color: #016BC1;
+            box-shadow: 0 3px 0 #0165b6;
+            color: #fff;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: 100;
+        }
+        
+        input[type="submit"]:hover {
+            background: #0165b6;
+        }
+        
+        input[type="reset"]:hover {
+            background: #0165b6;
+        }
+        
+        .req {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Feedback form</h1>
+    <form action="F_landing.html" name="myform" onsubmit="return validateform()">
+        <div class="row">
+            <label for="username">Username:  <sup class="req">*</sup></label>
+            <input type="text" id="username" name="name">
+        </div>
+        <!-- <br><br> -->
+        <div class="row">
+            <label for="pass">Password:  <sup class="req">*</sup></label>
+            <input type="password" name="password" id="pass">
+        </div>
+        <!-- <br><br> -->
+        <div class="row">
+            <label for="email">Email:  <sup class="req">*</sup></label>
+            <input type="email" id="email" name="email">
+            <!-- type="email" -->
+        </div>
+        <!-- <br><br> -->
+        <div class="row">
+            <label for="phone">Enter phone number:  <sup class="req">*</sup></label>
+            <input id="phone" name="num" placeholder="Enter 10 digit number"><span id="numloc"></span>
+            <!-- type="tel" pattern="[0-9]{10}" -->
+        </div>
+        <!-- <br><br> -->
+        <div class="row">
+            <p>Select gender: <sup class="req">*</sup></p>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" value="other">
+            <label for="other">Other</label>
+        </div>
+        <!-- <br><br> -->
+        <div class="row">
+            <label for="birthday">Date of birth:  <sup class="req">*</sup></label>
+            <input type="date" id="birthday" value="birthday" required>
+        </div>
+        <!-- <br><br> -->
+        <div class="row">
+            <label for="age">Enter your age:</label>
+            <input type="number" id="age" name="age" min="18" max="60" placeholder="18-60">
+        </div>
+        <!-- <br><br> -->
+        <div class="row">
+            <label for="address">Address:</label>
+            <textarea name="add" id="add" cols="30" rows="5" placeholder="Enter address here..." required></textarea>
+        </div>
+        <!-- <br><br> -->
+        <div class="row">
+            How did you come to know about us?
+            <input type="checkbox" name="mail" id="mail" value="Email">
+            <label for="mail">Email</label>
+            <input type="checkbox" name="int" id="int" value="Internet">
+            <label for="grp">Internet</label>
+            <input type="checkbox" name="media" id="media" value="Socil Media">
+            <label for="media">Socil Media</label>
+            <input type="checkbox" name="news" id="news" value="News">
+            <label for="media">News</label>
+            <input type="checkbox" name="other" id="other" value="Other">
+            <label for="other">Other</label>
+        </div>
+        <br>
+        <input type="text" placeholder="If other please specify.">
+        <br><br>
+        <label for="rate">Rate our website (0-10):</label>
+        <input type="range" min="0" max="10">
+        <br><br>
+        <label for="browser">Select browser: <sup class="req">*</sup> </label>
+        <input list="browsers" name="browser" id="browser" placeholder="Choose a browser" required>
+        <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+        <br><br>
+        <label for="today">Date & time of submission:</label>
+        <input type="datetime-local" id="today" name="today"><br><br>
+        <br><br>
+
+
+        <input type="reset">
+
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateform() {
+            var name = document.myform.name.value;
+            var password = document.myform.password.value;
+            var x = document.myform.email.value;
+            var atposition = x.indexOf("@");
+            var dotposition = x.lastIndexOf(".");
+            var num = document.myform.num.value;
+
+            if (name == null || name == "") {
+                alert("Name can't be blank");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            } else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                alert("Please enter a valid e-mail address \n atpostion:" + atposition + "\n dotposition:" + dotposition);
+                return false;
+            } else if (isNaN(num)) {
+                document.getElementById("numloc").innerHTML = "Enter Numeric value only";
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
