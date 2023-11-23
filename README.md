@@ -11,9 +11,11 @@ INTRODUCTION
 3.	Our goal was to create a user friendly and easy to use My Task Manager that rearranges itself around a calendar based on the due date and difficulty of each task. In addition, we wanted to familiarize ourselves with Angular Js, to rethink the role of the calendar and how mobile devices represent calendars, and to implement a basic auto-scheduling tool. There are existing task manager applications and calendar applications, but nothing that attempts to integrate the two in a useful manner. We decided that the best way to achieve our goals in the context of Software Engineering was to create a Web Application.
 
 People are very busy these days and it’s really very hard to keep everything in mind, they must need a web application where they can keep notes about the important tasks they have to do because everyone can’t hire a personal assistant to make them remind for everything.
+
 Fear not — this idea of creating a task manager application can help you avoid drowning in a sea of tasks. I am aiming to help you get on top of your Task management which are important for you.
 
 To design a web application to manage your daily tasks.
+
 This application is for managing all your “Daily Tasks” for increasing your productivity. The user interface is a simple mix-up of Task Manager & To-Do app that helps you get stuff done in an organized way. Whether your task is like accomplish projects, work to-dos, learning languages, mastering skills, sports or travel, etc. This application will help you to collect, keep, organize and remind you about all your tasks you have to do on that day or in coming days.
 
 1.1 Features
@@ -37,6 +39,6 @@ This application is for managing all your “Daily Tasks” for increasing your 
 
 
 To design a web application to manage your daily tasks.
-This application is for managing all your “Daily Tasks” for increasing your productivity. The user interface is a simple mix-up of Task Manager & To-Do app that helps you get stuff done in an organized way. Whether your task is like accomplish projects, work to-dos, learning languages, mastering skills, sports or travel, etc. This application will help you to collect, keep, organize and remind you about all your tasks you have to do on that day or in coming days
+This application is for managing all your “Daily Tasks” for increasing your productivity. The user interface is a simple mix-up of Task Manager & To-Do app that helps you get stuff done in an organized way. Whether your task is like accomplish projects, work to-dos, learning languages, mastering skills, sports or travel. This application will help you to collect, keep, organize and remind you about all your tasks you have to do on that day or in coming days
    
  
